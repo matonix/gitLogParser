@@ -3,6 +3,7 @@ module Lib
     ) where
 
 import           Data.List
+import           Data.Time
 import           GitLogParser
 import           System.Directory
 import           System.Process
@@ -36,9 +37,15 @@ gitFixedCommit gitRepos = do
   print $ show (length r) ++ " commits found."
   let r' = filter isFixed r
   print $ show (length r') ++ " fixed commits found."
-  print r'
+  let r'' = filter inPeriod r'
+  print $ show (length r'') ++ " newer fixed commits found."
+  mapM_ prettyLog r''
   where
     isFixed = isInfixOf "fix" . message
+    inPeriod = inPeriod' . parseGitLogTime . date where
+      inPeriod' d = old <= d && d < new where
+        old = UTCTime (fromGregorian 2014 1 1) (secondsToDiffTime 0)
+        new = UTCTime (fromGregorian 2016 1 1) (secondsToDiffTime 0)
 
 doLog :: String -> IO String
 doLog gitRepos = withCurrentDirectory (reposDir ++ gitRepos) $
@@ -46,3 +53,15 @@ doLog gitRepos = withCurrentDirectory (reposDir ++ gitRepos) $
 
 parseGitLog :: String -> Either P.ParseError [Log]
 parseGitLog logs = P.parse fileParser "" (logs ++ "\n")
+
+prettyLog :: Log -> IO ()
+prettyLog l = do
+  putStrLn $ "commit: " ++ commit l
+  putStrLn $ "merge: " ++ merge l
+  putStrLn $ "author: " ++ (\(Author n m) -> n ++ "<" ++ m ++ ">") (author l)
+  putStrLn $ "date: " ++ date l
+  putStrLn $ message l ++ "\n"
+
+parseGitLogTime :: String -> UTCTime
+parseGitLogTime = parseTimeOrError True defaultTimeLocale fmt where
+  fmt = "%a %b %e %H:%M:%S %Y %Z"

@@ -21,6 +21,7 @@ library
                      , directory
                      , process
                      , parsec
+                     , time
   default-language:    Haskell2010
 
 executable gitLogParser

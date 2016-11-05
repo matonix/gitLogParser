@@ -7,13 +7,12 @@ type Mail = String
 
 data Author = Author Name Mail deriving Show
 
-data Log = Log {
-                commit  :: String,
-                merge   :: String,
-                author  :: Author,
-                date    :: String,
-                message :: String
-} deriving Show
+data Log = Log { commit  :: String
+               , merge   :: String
+               , author  :: Author
+               , date    :: String
+               , message :: String
+               } deriving Show
 
 fileParser :: P.Parsec String () [Log]
 fileParser = P.manyTill logParser P.eof

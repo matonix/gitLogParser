@@ -1,0 +1,1031 @@
+"4694 commits found."
+"275 fixed commits found."
+"57 newer fixed commits found."
+commit: 89eea1e72b6c9f9faa986fbe548a4fb1914cca9d
+merge: 
+author: oheger <oliver.heger@oliver-heger.de>
+date: Thu Jun 11 21:39:40 2015 +0200
+    LANG-1085: Add a circuit breaker implementation (closes #95)
+    
+    Squashed commit of the following:
+    
+    commit 1b12db706b457408562a166c21bc6470a8064620
+    Merge: edebd97 def7832
+    Author: Oliver Heger <oliver.heger@oliver-heger.de>
+    Date:   Wed Jun 10 21:27:17 2015 +0200
+    
+        Merge pull request #1 from kinow/patch1
+    
+        This commit:
+    
+    commit def78320c5efcb734572c5b48623a952e3c94c75
+    Author: Bruno P. Kinoshita <brunodepaulak@yahoo.com.br>
+    Date:   Wed Jun 10 22:57:33 2015 +1200
+    
+        This commit:
+    
+        * fixes JavaDocs warnings in Checkstyle
+        * adds license headers
+        * renames the MemoryCircuitBreaker to ThresholdCircuitBreaker
+        * adds more tests to have a good coverage
+    
+    commit edebd970582ce2984258352c8482bcb51587f7d2
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 22:11:11 2015 +0200
+    
+        Documentation updates for EventCountCircuitBreaker.
+    
+    commit 3d8a4ff85a78173dd8f5437d9b4d931069128e20
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 21:55:02 2015 +0200
+    
+        Renamed TimedCircuitBreaker to EventCountCircuitBreaker.
+    
+        This name seems to be more appropriate as the main property of this circuit
+        breaker implementation is that it counts specific events and changes its state
+        when a certain threshold is reached.
+    
+    commit 0e4ce5a984ef699ddace61bbf430d695b011c6b5
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 21:51:22 2015 +0200
+    
+        Added documentation for CircuitBreaker interface.
+    
+    commit 0e6b22190ef1868655fec9b3814a2345ad206f76
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Mon Jun 8 22:27:05 2015 +0200
+    
+        Initial import of CircuitBreaker classes.
+
+commit: 56907c9a96a50af44415111fcea3e76ce4d1890f
+merge: 4811375 7f0d6b4
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Nov 16 20:16:52 2015 +0100
+    Merge branch 'LANG-1182'
+    
+    LANG-1182: Clarify JavaDoc of StringUtils.containsAny(). Thanks to
+    Larry West for the suggestion and to Pascal Schuhmacher for implementing
+    it. This fixes #114 from github.
+
+commit: 481137553f878e2f69ce05129d4aecbf016a1756
+merge: a5650a1 2c790cc
+author: Loic Guibert <lguibert@apache.org>
+date: Fri Nov 6 16:21:32 2015 +0400
+    Merge branch 'fix-LANG-1169'
+    
+    LANG-1169: Add StringUtils methods to compare a string to multiple strings
+    This closes #109 from github.
+    Thanks to Arman Sharif for providing a patch.
+    Thanks to Rafal Glowinski for providing an alternative implementations, see LANG-704.
+    Thanks to Robert Parr for providing an alternative implementations, see LANG-704.
+    
+    
+    Conflicts:
+            src/changes/changes.xml
+
+commit: a6addf94e5774f4e8fd71edbec68ff339c26e19f
+merge: 849578d 3acffcc
+author: Loic Guibert <lguibert@apache.org>
+date: Tue Oct 27 08:07:09 2015 +0400
+    Merge branch 'fix-LANG-1139'
+    
+    LANG-1139: Add replace by regular expression methods in StringUtils
+    This closes #92 from github.
+
+commit: 849578d3a8ef50eea1c5bfcd63f78779d30c1550
+merge: ae86519 5151290
+author: Loic Guibert <lguibert@apache.org>
+date: Fri Oct 23 21:53:32 2015 +0400
+    Merge branch 'fix-LANG-1171'
+    
+    LANG-1171: Add compare methods in StringUtils
+    This closes #110 from github.
+
+commit: 1dbdbfc3fadaee15424671e03bacb0fea134dc7e
+merge: 
+author: Sergio Fernández <wikier@apache.org>
+date: Mon Oct 19 21:38:18 2015 +0200
+    LANG-1175: fixed typo on changes
+
+commit: 6849dfc8a660bf8c95354520a2fa1283c9b3aa43
+merge: 
+author: Sebb <sebb@apache.org>
+date: Mon Aug 10 22:42:21 2015 +0100
+    LANG-1162 StringUtils#equals fails with Index OOBE on non-Strings with
+    identical leading prefix
+
+commit: fad946a1d79486c5118a596e8ac67ef7d5189070
+merge: 
+author: Chas Honton <chas@apache.org>
+date: Fri Jul 24 20:06:15 2015 -0700
+    fix ExceptionUtilsTest to compile with java 1.6
+
+commit: 39380da86acc717f419da48f070f8cf7d9f9ec94
+merge: 
+author: Jack <792626757@qq.com>
+date: Wed May 6 11:43:03 2015 +0800
+    add checkNotNull method in ReflectionToStringBuilder.java to fix #LANG-1132
+
+commit: 4a882e76d9c9940ac561e8f17ede77c85e3dbeda
+merge: 1cf8af4 e8db723
+author: Benedikt Ritter <britter@apache.org>
+date: Fri May 1 23:55:25 2015 +0200
+    Merge branch 'branch-3.4-fix-json-style-rebase'
+    
+    LANG-1128: JsonToStringStyle doesn't handle chars and objects correctly.
+    This also fixes #74 from github. Thanks to github user jacktan1991.
+
+commit: 6a99050166c945a226d5f8275ce4a9dca3518285
+merge: 
+author: Jack <792626757@qq.com>
+date: Fri May 1 16:07:44 2015 +0800
+    fixed Tab to 4 spaces in JsonToStringStyleTest.java
+
+commit: 6d23e85570fe1139cf5ef3bc9b4e57ea73680b6e
+merge: 
+author: Jack <jacktan1991@users.noreply.github.com>
+date: Thu Apr 30 17:50:59 2015 +0800
+    fix imports in JsonToStringStyleTest.java
+
+commit: fb7335ab163588fe6ee67ef26d3b3edad5cf4bd5
+merge: 
+author: Jack <792626757@qq.com>
+date: Wed Apr 29 11:05:59 2015 +0800
+    fix the JsonToStringStyle:except number types and boolean type, all other types in java should be 'appendAsString'
+
+commit: e2c0ea4374c02539ad9bc6c4328b74f25eb72405
+merge: 
+author: The Datalorax <datalorax@gmail.com>
+date: Tue Apr 28 21:07:21 2015 +0100
+    #LAN-1114 fixes bug in TypeUtils.equals(WildcardType, Type) where it was incorrectly returning true when the second argument was not a Wildcard type.
+
+commit: 102b75cd923c30fb81047211ea1eb0b12cfe1a43
+merge: 0799f01 d4359d5
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Apr 28 21:55:53 2015 +0200
+    Merge branch 'fix-LANG-1119' of https://github.com/rikles/commons-lang
+    This closes #71.
+    
+    LANG-1119: Add rotate(string, int) method to StringUtils. Thanks to
+    Loic Guibert.
+
+commit: 0799f01df18c8f2d5695390cfc6db807fe019b18
+merge: 8e7df02 84c5e8c
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Apr 28 21:35:34 2015 +0200
+    Merge branch 'fix-LANG-1118'
+    
+    LANG-1118: StringUtils.repeat('z', -1) throws NegativeArraySizeException.
+    Thanks to Loic Guibert.
+
+commit: 61095ef28e4c1f8c1be7f97ff7d195de94bce4d9
+merge: 
+author: beradrian <beradrian@yahoo.com>
+date: Mon Mar 23 16:32:28 2015 +0200
+    fix comments
+
+commit: 73a8fba6fb23af45ee77f52f33bb8d791a9caa05
+merge: 
+author: Duncan Jones <djones@apache.org>
+date: Wed Apr 15 19:59:50 2015 +0000
+    Updates for LANG-1058: StringUtils.uncapitalize performance improvement. Similar fix also applied to StringUtils.capitalize (as mentioned in issue). Thanks to Leo Wang.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1673944 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 319588b45c847356a07b19e9e7323a46e319e3ae
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Apr 6 17:58:46 2015 +0000
+    Simplify isSameLenght implementations by reusing getLength. This also fixes a lot of the useless paranthesis warnings generated by PMD.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1671622 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 09c42e7d12b2936ac0dc5c67200c28b6412bd395
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 3 12:09:07 2015 +0000
+    LANG-821: Support OS X versions in SystemUtils. This also fixes #59 from github. Thanks to Timo Kockert.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1671043 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 9c7b0fb8e681b901e5fc40c699e4730855f2c14d
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 3 12:01:59 2015 +0000
+    LANG-794: SystemUtils.IS_OS_WINDOWS_2008, VISTA are incorrect. This also fixes #60 from github. Thanks to Timo Kockert.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1671040 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 098395eaee0e0743516cf403cafc004b110230cf
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Mar 27 08:37:14 2015 +0000
+    Dummy commit to close github issue, which has been fixed in r1669520. This fixes #56 from github.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1669525 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a211ef288c45fdeee5f05fa4708a3d9e23d1cdd4
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Mar 26 10:24:19 2015 +0000
+    Better JavaDoc for LANG-1093: Add ClassUtils.getAbbreviatedName. This fixes #57 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1669311 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: c8e96c0c733ea06ac7481c85f04a8e10ae262ec1
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Mar 26 10:21:24 2015 +0000
+    LANG-1091: Shutdown thread pools in test cases. This fixes #58 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1669310 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a74ed8ca048775e70a46af3c21ab89a4a85cd19b
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Mar 23 07:04:07 2015 +0000
+    Dummy commit to close github issue. This fixes #35 from github.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1668523 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bf6ee5c56eb32bb572c240d765d542c048ec9565
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:46:02 2015 +0000
+    LANG-948: Exception while using ExtendedMessageFormat and escaping braces. This fixes #19 from github. Thanks to Andrey Khobnya.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666679 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 3328387a53e6abc26e171b97d8d3dc1c2b5d4971
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:25:06 2015 +0000
+    LANG-990: Avoid String allocation in StrBuilder.append(CharSequence). This fixes #51 from github. Thanks to Mikhail Mazurskiy and Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666669 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: adebbdc750821a377549ff0bb867e09eeedf6172
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:12:47 2015 +0000
+    LANG-1098: Update maven-checkstyle-plugin to 2.14. This fixes #55 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666664 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d6f59c373f91c01d54482bb30a63a8d588b9eaa2
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:07:56 2015 +0000
+    LANG-1097: Update org.easymock:easymock to 3.3.1. This fixes #54 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666662 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 08a854a4f93befababeb479ba2722cd0477a59f8
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:02:34 2015 +0000
+    LANG-1096: Update maven-pmd-plugin to 3.4. This fixes #53 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666661 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bf3e77d897fb63d9142d0b3316fc2c6770d64f5b
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 11:55:43 2015 +0000
+    LANG-1095: Update maven-antrun-plugin to 1.8. This fixes #52 from github. Thanks to Michał Kordas
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666658 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 1f75a8f7cc28fef663eaca75e831c9da11ea2b0e
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Mar 13 18:18:59 2015 +0000
+    LANG-877: Performance improvements for StringEscapeUtils. This fixes #49 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666535 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d38919fcbda835f0ad82d65f25349bd7105b67cc
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Mar 13 07:29:21 2015 +0000
+    LANG-1093: Add ClassUtils.getAbbreviatedName(). This fixes #48 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666362 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bdb5d9723056941a0a29aabc2eaf81b2c96956b5
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Feb 23 20:15:49 2015 +0000
+    LANG-1086: Remove busy wait from AtomicSafeInitializer.get(). This also fixes #46 from github. Thanks to github user artnaseef.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1661762 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: ffc38b1f3b35ddfadb942240b9d2f933ec83d1be
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 08:25:43 2015 +0000
+    LANG-1081: DiffBuilder.append(String, Object left, Object right) does not do a left.equals(right) check. This fixes #41 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654137 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 63f1d6b83bc10a2880f5ec17a172fab284d2eff5
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 08:10:24 2015 +0000
+    LANG-1055: StrSubstitutor.replaceSystemProperties does not work consistently. This fixes #43 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654134 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 38ed1a07259862eceaad05c6581b7f34e85f6be7
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 07:56:14 2015 +0000
+    LANG-1082: Add option to disable the objectsTriviallyEqual test in DiffBuilder. This fixes #44 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654131 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 6eac3468d4569e64f18757225aa8f7fd6f2a5241
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Jan 20 17:30:11 2015 +0000
+    LANG-1083: Add (T) casts to get unit tests to pass in old JDK. This fixes #42 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1653307 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: c4ddbe6456c9631c301171098a8ac016eb4e582c
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Jan 1 19:01:41 2015 +0000
+    LANG-1015: Add JsonToStringStyle implementation to ToStringStyle. This fixes #12 and #26 from github. Thanks to Thiago Andrade.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1648919 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 2afdf4d05e38f63b56b0414cf524916681ab58aa
+merge: 
+author: Duncan Jones <djones@apache.org>
+date: Fri Nov 14 12:49:15 2014 +0000
+    Javadoc fix for LANG-1064.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1639624 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 635e41ea181c5fee8860a7044c84ae3557b51189
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sun Nov 9 12:47:12 2014 +0000
+    LANG-1052: Multiline recursive to string style. This fixes #34 from github. Thanks to Jan Matèrne.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1637671 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 4477ae695211449db1df589e9fdc6de84bf4c640
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Oct 2 10:12:12 2014 +0000
+    LANG-1041: Fix MethodUtilsTest so it does not depend on JDK method ordering. This fixes #30 from github. Thanks to Alexandre Bartel.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1628922 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 161ef971c43ee529ca8ac7f2619cd40fdc7c4b27
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Aug 26 11:53:51 2014 +0000
+    Add fixme regarding a JDK 1.3 workaround
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1620579 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 68a6fd6125302169a5a0687e795d26b5cbd97303
+merge: 
+author: Matthew Jason Benson <mbenson@apache.org>
+date: Tue May 13 21:13:04 2014 +0000
+    TypeUtils wildcard fixes
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1594387 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d910918faf359f8144d4195ead470fd0921554dc
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon May 5 17:48:48 2014 +0000
+    LANG-1007: Fixing NumberUtils JAVADoc comments for max methods. This also fixes pull request #22 from github. Thanks to Thiago Andrade.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1592587 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: b4b51a8fc9eed7274a045b2f3192d77782b0e4fa
+merge: 
+author: Gary D. Gregory <ggregory@apache.org>
+date: Wed Apr 30 21:49:35 2014 +0000
+    <action issue="LANG-1001" type="fix" dev="ggregory" due-to="Michael Osipov">ISO 8601 misspelled throughout the Javadocs</action>
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1591488 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: b46471100b98e6e800f93cc1882574264453a89d
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 25 11:51:05 2014 +0000
+    Add missing bug fix to changes.xml
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1590006 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: fbb0f7f88c84001e0a92dae6a71b7e43bda65a56
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 11 13:28:30 2014 +0000
+    LANG-995: Fix bug with stripping spaces on last line in WordUtils.wrap(). This fixes #18 from github. Thanks to Andrey Khobnya
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1586649 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 483a02a44c684b378f3e76920560e123c32989f7
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sun Apr 6 11:50:41 2014 +0000
+    Add a note about 3.3.2 and DocLint, since I can not get the site build working without fixing all the warnings DocLint generates.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1585288 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d3ebe17cb3602180d952cb5d081f351a7df4fe9b
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 29 10:42:01 2014 +0000
+    Disable doclint for 3.3.2 release, since I do not have the time to fix all the JavaDoc errors
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1582981 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: e99fb20a70f11191d0b58328b031a9e4b806e3d2
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 15 12:31:09 2014 +0000
+    Add Release notes for upcoming 3.3.1 bugfix release
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1577847 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a4772be651311ef2b2ab119d56409fa32c6ee7e8
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 15 12:23:09 2014 +0000
+    Preparing bugfix release 3.3.1
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1577842 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 19120b722441382d1210a548f9522c6480d699cd
+merge: 
+author: Sebastian Bazley <sebb@apache.org>
+date: Mon Mar 3 22:41:13 2014 +0000
+    Javadoc fix - method does not use a TimeZone
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1573790 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 5feaa5fe2c79f1f2e81bdf4730f5cab831024dae
+merge: 
+author: Gary D. Gregory <ggregory@apache.org>
+date: Mon Feb 10 02:06:06 2014 +0000
+    <action issue="LANG-969" type="fix" dev="ggregory" due-to="Matt Bishop">StringUtils.toEncodedString(byte[], Charset) needlessly throws UnsupportedEncodingException</action>
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1566489 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: b5a9cd944c8b6febf55e1191310d02581ac859a8
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Jan 20 17:33:09 2014 +0000
+    LANG-951: Fragments are wrong by 1 day when using fragment YEAR or MONTH - fix test that failed because of wrong assertions
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1559787 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 0942ef04f1fa911d382b79a92dca1dd4b3eb88e6
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Jan 20 17:19:59 2014 +0000
+    LANG-951: Fragments are wrong by 1 day when using fragment YEAR or MONTH - applying patch provided by Sebastian Götz, several tests now fail because of wrong assertions, will fix them in a separate commit
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1559780 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d971fa4cf7f3c7e7cd4bdbaa3662c1014731d95f
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sun Jan 5 12:08:29 2014 +0000
+    LANG-942: Test failure in FastDateParserTest and FastDateFormat_ParserTest when building with JDK8. Thanks to Bruno P. Kinoshita and Henri Yandell for their help in fixing this issue.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1555485 13f79535-47bb-0310-9956-ffa450edef68
+
+"6167 commits found."
+"481 fixed commits found."
+"44 newer fixed commits found."
+commit: 8bcf7e23a62878d1efe3bbc1c57287d25d161bab
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Dec 28 14:13:45 2015 -0700
+    Javadoc fixes.
+
+commit: 7b62d0155efebb2748918a5e4f67ac0ee2e759da
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Dec 28 08:29:28 2015 -0700
+    Javadoc fixes.
+
+commit: 799a38a89fdbfe50d98c079409db72afce7494e2
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Sat Dec 26 14:59:31 2015 -0700
+    Javadoc fixes.
+
+commit: afa12022716391a9faa574b43d5e75b7f7f4f958
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Sat Dec 26 09:38:30 2015 -0700
+    Javadoc fixes.
+
+commit: ab7fd6c92a05dbd20e874f7ee23c452218f09280
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Fri Dec 25 15:56:08 2015 -0700
+    Javadoc fixes.
+
+commit: 4ebd5b61720a680e8507f0a4f1eebf0d654e8e09
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Fri Dec 25 09:18:31 2015 -0700
+    Javadoc fix.
+
+commit: 030b9a7234812154b67d1145a435efc34d102465
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Fri Dec 25 12:13:03 2015 +0100
+    Added forgotten name.
+    
+    Julien Queyrel helped a lot to identify and fix the issue about Adams
+    integrators stability.
+
+commit: 9085dfacc0e84ed1fbe4e961563cdfffbca42e10
+merge: 
+author: Thomas Neidhart <thomas.neidhart@gmail.com>
+date: Wed Dec 2 21:19:37 2015 +0100
+    Apply fix for timestamp format.
+
+commit: fd37b5dd02bbce93f6f4fceb6bc3e6aa4641c5a7
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Nov 9 15:11:33 2015 -0700
+    Reverted flawed fix for MATH-1246.
+
+commit: a94ff90ab6cd2d92ccb2eb1fd7913b4e5256f02b
+merge: 
+author: Otmar Ertl <otmar.ertl@gmail.com>
+date: Thu Nov 5 20:37:27 2015 +0100
+    MATH-1269: fixed FastMath.exp returning NaN for non-NaN arguments
+
+commit: 793e9df0436cefdbf523bba70ac621493ce9e649
+merge: 
+author: Otmar Ertl <otmar.ertl@gmail.com>
+date: Thu Nov 5 20:34:15 2015 +0100
+    fixed some typos in comments
+
+commit: ad12d97cbb4c35017d55c4105174671f1c38b36a
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon Nov 2 13:43:09 2015 +0100
+    Use a fixed seed to avoid random test failure.
+
+commit: c1607bbc3523e57a48f0cbce4e1be36c046a69ce
+merge: 
+author: Otmar Ertl <otmar.ertl@gmail.com>
+date: Sun Aug 9 18:13:10 2015 +0200
+    fixed my email address
+
+commit: 09fe956a62e19c160d0093f8fecf254c2bb6f0cb
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Thu Jul 23 20:35:25 2015 -0400
+    Changed data size check to be positive length, not > 1 to fix
+    ResizableDoubleArray constructor failure on input array of
+    length 1.
+    
+    JIRA: MATH-1252
+    Thanks to John Bay
+
+commit: cf4416a84203ff9d360d4398da3b166e6d0c72b9
+merge: 
+author: Otmar Ertl <otmar.ertl@gmail.com>
+date: Fri Jul 17 20:46:53 2015 +0200
+    [MATH-1242] fixed shuffle algorithm used by the Monte Carlo KS statistic
+    calculation method, moved shuffle algorithm to static package-private
+    method that is now explicitly tested by a unit test
+
+commit: 088d0f9222337a1b3be44b99523094ff0af06cde
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sun Jul 5 10:10:54 2015 +0200
+    Added mapping functions to MathArrays.
+    
+    These methods allow to map any univariate or bivariate function to
+    arrays.
+    
+    This fixes several pull requests on github, but uses a generalized
+    mapping approach rather than specific api for each function (closes #6,
+    closes #7, closes #8).
+
+commit: c771c0080b08abd80418c4e88f1be3efec828f0a
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon May 4 13:43:27 2015 +0200
+    Attempt to circumvent some errors which seem to be platform-dependent.
+    
+    The Jenkins build often fails on code that seems to be perfectly
+    correct. Failures also do no always happen so they may depend on
+    platform. There were similar problems a few months ago that were
+    probably related to JIT bugs.
+    
+    This fix simply tries to do the same thing as before, but with an
+    earlier detection of NaN in one case, and by comparing directly the bits
+    representation in another case, to avoid wrong optimizations.
+
+commit: c768ed307d08484cd61ad8ac3faac330d22c8775
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Apr 8 17:36:24 2015 +0200
+    Fixed wrong handling of a corner case.
+    
+    The problem occurs in very difficult to reproduce cases, as it is really
+    a corner case. When the vanishing cut-subhyperplane occurs during a
+    Difference operation, the fixed node still has a null cut-subhyperplane.
+    This was not properply handled.
+    
+    JIRA: MATH-1162
+
+commit: ce2badf02e266a84e2485f1793f13bf722c29306
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Mar 9 12:37:57 2015 -0700
+    Corrected the fix for MATH-1208.
+
+commit: f1b2fcd7f51995130d71f1703e5c292ec648e94c
+merge: 
+author: Thomas Neidhart <thomas.neidhart@gmail.com>
+date: Thu Feb 19 22:20:04 2015 +0100
+    [MATH-1204] Added changelog entry, fix javadoc typos.
+
+commit: f7e42d2ccf949a5893a439227c8c6bafd2598f26
+merge: 
+author: Sebb <sebb@apache.org>
+date: Sun Jan 25 00:26:21 2015 +0000
+    MATH-1198 Simplify FastMath exp function
+    Hopefully also fix Java 1.5 JIT bug
+
+commit: 0f36265123605cac6af05b7b8c8f4036b58f4da4
+merge: 
+author: tn <thomas.neidhart@gmail.com>
+date: Tue Jan 13 10:31:06 2015 +0100
+    Revert previous commit with debug output, fix typo.
+
+commit: c93cc818fb56aca198545c63a8015f26472ee0fa
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Thu Jan 8 17:20:25 2015 +0100
+    Announced fix for non-Java1.5 code.
+    
+    JIRA: MATH-1188
+
+commit: 75872ffe9b3711683253c1d5be7ec3bb80ef1a30
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Tue Dec 16 11:48:58 2014 +0100
+    fixed typos in error messages translations
+
+commit: 4ed24c87c593a7ae69f4310fa32a5ea1d542f8e4
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sat Dec 13 21:40:00 2014 +0100
+    fixed missing closing element
+
+commit: 301ad592142079d36f4d33f5309c103c7f4f5dfb
+merge: 
+author: Gilles <erans@apache.org>
+date: Wed Nov 12 12:16:13 2014 +0100
+    MATH-1167
+    
+    Use user-specified threshold to allow detection of singular matrix.
+    [Reported, with fix, by Neil Ireson.]
+
+commit: 4a339cda2c3933a2adcb23ea0ea8470d68d1b010
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Fri Oct 17 10:29:20 2014 +0200
+    Notified fix for bicubic splines.
+    
+    Thanks to Hank Grabowski for the patch.
+    
+    JIRA: MATH-1138
+
+commit: 69273dca6188a3d7d629d0d32dcf9cdb5b6c1036
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Oct 8 14:25:05 2014 +0200
+    fixed too long first step in fixed Runge-Kutta integrators.
+    
+    This change is similar to the one done two years ago for adaptive step sizes integrator.
+    
+    JIRA: MATH-727
+
+commit: fca88f8e3d44d743e82ef2fb3ce880f8b98149a3
+merge: 
+author: Phil Steitz <psteitz@apache.org>
+date: Sat Jun 28 20:08:16 2014 +0000
+    Changed distribution tests to use fixed seed. JIRA: MATH-418.  Thanks to Venkat Murthy.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1606387 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: f4e96cb7fe64045503c4a5344704e80cca81185a
+merge: 
+author: Thomas Neidhart <tn@apache.org>
+date: Mon May 19 20:11:32 2014 +0000
+    Use the test-specific hull generator instead of a fixed one.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1596040 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a197ba858ecf364f9ddf2fe56f3611cf97b4c3b1
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon May 19 15:00:03 2014 +0000
+    Fixed NullPointerException in BSPTree.
+    
+    The error occurred when chopping-off a sub-hyperplane
+    that was exactly at a region boundary.
+    
+    Thanks to Aurélien Labrosse for the fix.
+    
+    JIRA: MATH-1123
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1595924 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 6abd9f7508c121fada3fdf2c188a68097bb50b12
+merge: 
+author: Thomas Neidhart <tn@apache.org>
+date: Thu May 1 13:48:02 2014 +0000
+    Javadoc fixes with Java 8.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1591664 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: cbc32459f8f36e5c57a9db74709e813e5f77bb5e
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sun Apr 20 14:29:42 2014 +0000
+    Added a fast single-step method for fixed-step Runge-Kutta integrators.
+    
+    JIRA: MATH-1119
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1588769 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 7f162008a2eea123a43f241e5e214dadf6b9e88e
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sun Apr 20 13:25:11 2014 +0000
+    Added an order 6 fixed-step ODE integrator.
+    
+    The integrator was designed by H. A. Luther in 1968. We have added a
+    corresponding step interpolator by solving the order conditions provided
+    by the rkcheck tool.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1588753 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 5929846a208518582a7783d8715c401ea1e2acf2
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon Mar 3 11:11:46 2014 +0000
+    Fixed failing test.
+    
+    As functions evaluations were not counted properly, which has been fixed
+    a few days ago, the multi-start test in fact did not performed all
+    expected restarts. This commit fixes this (by increasing the max
+    evaluations), and fixes the result checks accordingly.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1573523 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 499101c88c8158844e7bbdcba35b8fe91bed8314
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Feb 19 17:19:59 2014 +0000
+    The sparse vector and matrix classes have been un-deprecated.
+    
+    This is a reversal of a former decision, as we now think we should adopt
+    a generally accepted behavior which is ... to ignore the problems of
+    NaNs and infinities in sparse linear algebra entities.
+    
+    JIRA: MATH-870 (which is therefore NOT fixed)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1569825 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 683a898d55b656a978ca1aafcf20dedb9427268c
+merge: 
+author: Thomas Neidhart <tn@apache.org>
+date: Sat Feb 8 16:50:32 2014 +0000
+    [MATH-976] Use placeholders and fix manifest for tools jar.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1566046 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 7897aa6a83a5e63da487e72c2735fb042259f6e4
+merge: 
+author: Thomas Neidhart <tn@apache.org>
+date: Sun Feb 2 17:56:13 2014 +0000
+    [MATH-749] Use new method Vector2D.crossProduct, fix typos, return Segment instead of Line in ConvexHull2D.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1563687 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: faf997271b36b80d9a342bb1a5a666e8a7a1fb56
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Thu Jan 30 16:31:08 2014 +0000
+    Partly fixed MATH-1096.
+    
+    The 2D cases seem to work now, but there are still problems with the 3D
+    cases.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1562882 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 2a3b56daa03253a8abccf5d895a310831ef0275a
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Jan 29 20:19:20 2014 +0000
+    Added tests for 3D smallest ball enclosing.
+    
+    WARNING! These tests have revealed a bug in our implementation of the
+    smallest enclosing ball algorithm. So some tests are currently ignored
+    in order to avoid having lots of messages, but I am already working on
+    them. The problems should be fixed (and the tests activated) before 3.3
+    release.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1562573 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 7cfbc0da48c8cc8939e97427d8ee5b22c5e55f28
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Fri Jan 24 16:03:44 2014 +0000
+    Fixed error when splitting an arc close to its end.
+    
+    fixes: MATH-1093
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1561047 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 5b71c17c81adaa8ad133e60b99ce86b421bfd918
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Tue Jan 21 17:48:16 2014 +0000
+    Javadoc fix.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1560114 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: b1e3f391b510800ba5aba9381d0f877e5851f4db
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon Jan 20 15:34:02 2014 +0000
+    Javadoc fix.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1559745 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 0f13370f354da824b97a8004f4b8dd9d23500241
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sun Jan 12 20:41:34 2014 +0000
+    Fixed an error introduced by a wrong fix...
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1557609 13f79535-47bb-0310-9956-ffa450edef68
+
+"1997 commits found."
+"102 fixed commits found."
+"18 newer fixed commits found."
+commit: f5bd8f5063258501c7fba6f49925625dfdd7799a
+merge: 9ced54c 635830e
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Mon Dec 7 23:19:21 2015 +0000
+    Merge pull request #332 from pandacalculus/master
+    
+    fixes bug in timezone resolution that prevents some timezones being resolved
+
+commit: 635830e5d8b7ee7c99ffaf40251936a876ee2df5
+merge: 
+author: Brendan Humphreys <brendan@canva.com>
+date: Mon Nov 23 23:00:28 2015 +1100
+    fixes subtle bug in timezone binary search
+
+commit: 98aa441a6b110643665896ab9dac7cab6ee88936
+merge: 
+author: Buryakov Dmitry <buryakovmail@gmail.com>
+date: Wed Oct 7 13:04:11 2015 +0400
+    text mistake fix
+
+commit: 0fb5db523fc753f00971c3bb9d8f5df2825ed73e
+merge: 5825cc1 1764f68
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Thu Sep 17 21:07:43 2015 +0100
+    Merge pull request #315 from Rok-Piltaver/master
+    
+    Overflow bug fix and documentation fix
+
+commit: 2948a362fdd63f2799794fd2ce316666756cacd5
+merge: 
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Fri Aug 21 00:43:00 2015 +0100
+    Add Interval.parseWithOffset(String)
+    
+    Provides a way to parse the fixed offset in an interval string
+    Fixes #299
+    Fixes #296
+
+commit: b9fe534c7f5876eced6494a6d6c1deaf2528a579
+merge: 
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Mon Mar 2 20:10:49 2015 +0000
+    Format Etc/* time-zone without using Etc prefix
+    
+    Fixes #244
+
+commit: 1f0ca1e4aa7a1669a50ca69cd977707b5ebb6287
+merge: 
+author: Dan Cavallaro <dancaval@amazon.com>
+date: Thu Jan 22 08:24:54 2015 -0800
+    Tiny copy-paste typo fix
+
+commit: dbda260e5c2bfac5c20813c1a7645e8f15f89a6d
+merge: 
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Thu Nov 20 20:07:01 2014 +0000
+    Handle complex prefix/suffix combinations
+    
+    For example, 'M' for months and 'm' for minutes.
+    Parser is generally case insensitive, but handle this specific case
+    Fixes #194
+    Fixes #203
+
+commit: 504acaef364e4626161b372744441bb44866abd4
+merge: 986d905 8769b77
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Thu Oct 2 23:28:28 2014 +0100
+    Merge pull request #182 from longhua/fix_#173
+    
+    Don't advance to dayOfWeek if it is 0
+    
+    See #182
+
+commit: 8769b776d5f28650e1cb50878f8266c3d7e4a9e1
+merge: 
+author: LongHua Huang <longhua1984@gmail.com>
+date: Sat Sep 20 08:01:50 2014 +0800
+    Don't advance to dayOfWeek if it is 0
+    
+    If 24:00 is used with a specific day, it will advance to next Monday, since advance is set to true and dayOfWeek is updated to 1.
+    
+    To fix #173:
+    1, don't set advance to true if dayOfWeek is 0.
+    2, don't update dayOfWeek if it is 0.
+
+commit: 47c194065d46f3b84fc3642b5613e64b9403c78f
+merge: 
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Mon Sep 8 15:18:37 2014 +0100
+    Handle suffixes/affixes that clash
+    
+    For example, m for minutes and ms for milliseconds
+    Improve on patch by adjusting memory model issues
+    Fixes #154, fixes #169
+
+commit: 7eb5f6043f21431cfc714200e53a738adceb6ecd
+merge: 
+author: Stephen Colebourne <scolebourne@joda.org>
+date: Mon Sep 8 15:16:46 2014 +0100
+    Handle suffixes/affixes that clash
+    
+    For example, m for minutes and ms for milliseconds
+    Fixes #154, fixes #169
+
+commit: 226b0439bbe1eb2ed144a163827167635b492b69
+merge: 
+author: Grzegorz Świerczyński <gswierczynski@gswierczynski.pl>
+date: Sun Aug 24 20:18:07 2014 +0200
+    Create base class for affixes that will solve #154.
+
+commit: 312f39db344bb8a37ed4e50ce00099fff3c830aa
+merge: 
+author: Grzegorz Świerczyński <gswierczynski@gswierczynski.pl>
+date: Sun Aug 24 18:31:55 2014 +0200
+    Fix parsing with PeriodFormatter containing composite affix.
+
+commit: faa4fad4e2afe6e9949d6d0b676e733800132704
+merge: 
+author: Grzegorz Świerczyński <gswierczynski@gswierczynski.pl>
+date: Sat Aug 23 12:38:11 2014 +0200
+    Assure correct order of regex affixes during parsing.
+
+commit: a5d9d7e5d169587db3523417b7760f4080388826
+merge: 
+author: Grzegorz Świerczyński <gswierczynski@gswierczynski.pl>
+date: Thu Aug 14 21:22:24 2014 +0200
+    Assure immutability of RegExAffix. Fix formatting.
+
+commit: 3a2fe0a8f85e96efc9543306786bdb372d4c4be2
+merge: 
+author: vrozkovec <vit.rozkovec@gmail.com>
+date: Thu May 29 17:16:55 2014 +0200
+    fixed javadoc
+
+commit: c38ff0f986664b7d195d62391ff23f3f4e6139bd
+merge: 
+author: vrozkovec <vit.rozkovec@gmail.com>
+date: Thu May 29 17:15:42 2014 +0200
+    fixed javadoc description
+
+[(),(),()]
