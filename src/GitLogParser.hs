@@ -1,8 +1,3 @@
-{-# OPTIONS_GHC -fno-warn-missing-signatures #-}
-{-# OPTIONS_GHC -fno-warn-unused-binds #-}
-{-# OPTIONS_GHC -fno-warn-unused-do-bind #-}
-{-# OPTIONS_GHC -fno-warn-unused-matches #-}
-
 module GitLogParser where
 
 import qualified Text.Parsec as P

@@ -1,1 +1,3 @@
-A simple parser to parse normal git logs captured using 'git log' command in haskell.
+This project is for my research.
+
+Thank you for nice parser [ans7991](https://github.com/ans7991/gitLogParser)!

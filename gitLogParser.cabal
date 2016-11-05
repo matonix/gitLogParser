@@ -1,20 +1,36 @@
 name:                gitLogParser
 version:             0.1.0.0
-synopsis:            gitLogParser
+synopsis:            Initial project template from stack
 description:         Please see README.md
-homepage:            http://github.com/ans7991/gitLogParser#readme
+homepage:            https://github.com/matonix/gitLogParser#readme
 license:             BSD3
 license-file:        LICENSE
-author:              anshulrastogi
-maintainer:          anshulr@thoughtworks.com
-copyright:           2015 Anshul Rastogi
-category:            Parser
+author:              maton
+maintainer:          automatonix@gmail.com
+copyright:           2016 maton
+category:            Web
 build-type:          Simple
+-- extra-source-files:
 cabal-version:       >=1.10
 
-executable gitLogParser
+library
   hs-source-dirs:      src
-  main-is:             Main.hs
+  exposed-modules:     Lib
+                     , GitLogParser
+  build-depends:       base >= 4.7 && < 5
+                     , directory
+                     , process
+                     , parsec
   default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5,
-                       parsec
+
+executable gitLogParser
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:
+  build-depends:       base
+                     , gitLogParser
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/matonix/gitLogParser
