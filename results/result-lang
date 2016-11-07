@@ -1,0 +1,362 @@
+commons-lang
+4694 commits found.
+275 fixed commits found.
+57 newer fixed commits found.
+37 LANGed newer fixed commits found.
+commit: 89eea1e72b6c9f9faa986fbe548a4fb1914cca9d
+merge: 
+author: oheger <oliver.heger@oliver-heger.de>
+date: Thu Jun 11 21:39:40 2015 +0200
+    LANG-1085: Add a circuit breaker implementation (closes #95)
+    
+    Squashed commit of the following:
+    
+    commit 1b12db706b457408562a166c21bc6470a8064620
+    Merge: edebd97 def7832
+    Author: Oliver Heger <oliver.heger@oliver-heger.de>
+    Date:   Wed Jun 10 21:27:17 2015 +0200
+    
+        Merge pull request #1 from kinow/patch1
+    
+        This commit:
+    
+    commit def78320c5efcb734572c5b48623a952e3c94c75
+    Author: Bruno P. Kinoshita <brunodepaulak@yahoo.com.br>
+    Date:   Wed Jun 10 22:57:33 2015 +1200
+    
+        This commit:
+    
+        * fixes JavaDocs warnings in Checkstyle
+        * adds license headers
+        * renames the MemoryCircuitBreaker to ThresholdCircuitBreaker
+        * adds more tests to have a good coverage
+    
+    commit edebd970582ce2984258352c8482bcb51587f7d2
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 22:11:11 2015 +0200
+    
+        Documentation updates for EventCountCircuitBreaker.
+    
+    commit 3d8a4ff85a78173dd8f5437d9b4d931069128e20
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 21:55:02 2015 +0200
+    
+        Renamed TimedCircuitBreaker to EventCountCircuitBreaker.
+    
+        This name seems to be more appropriate as the main property of this circuit
+        breaker implementation is that it counts specific events and changes its state
+        when a certain threshold is reached.
+    
+    commit 0e4ce5a984ef699ddace61bbf430d695b011c6b5
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Tue Jun 9 21:51:22 2015 +0200
+    
+        Added documentation for CircuitBreaker interface.
+    
+    commit 0e6b22190ef1868655fec9b3814a2345ad206f76
+    Author: oheger <oliver.heger@oliver-heger.de>
+    Date:   Mon Jun 8 22:27:05 2015 +0200
+    
+        Initial import of CircuitBreaker classes.
+
+commit: 56907c9a96a50af44415111fcea3e76ce4d1890f
+merge: 4811375 7f0d6b4
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Nov 16 20:16:52 2015 +0100
+    Merge branch 'LANG-1182'
+    
+    LANG-1182: Clarify JavaDoc of StringUtils.containsAny(). Thanks to
+    Larry West for the suggestion and to Pascal Schuhmacher for implementing
+    it. This fixes #114 from github.
+
+commit: 481137553f878e2f69ce05129d4aecbf016a1756
+merge: a5650a1 2c790cc
+author: Loic Guibert <lguibert@apache.org>
+date: Fri Nov 6 16:21:32 2015 +0400
+    Merge branch 'fix-LANG-1169'
+    
+    LANG-1169: Add StringUtils methods to compare a string to multiple strings
+    This closes #109 from github.
+    Thanks to Arman Sharif for providing a patch.
+    Thanks to Rafal Glowinski for providing an alternative implementations, see LANG-704.
+    Thanks to Robert Parr for providing an alternative implementations, see LANG-704.
+    
+    
+    Conflicts:
+            src/changes/changes.xml
+
+commit: a6addf94e5774f4e8fd71edbec68ff339c26e19f
+merge: 849578d 3acffcc
+author: Loic Guibert <lguibert@apache.org>
+date: Tue Oct 27 08:07:09 2015 +0400
+    Merge branch 'fix-LANG-1139'
+    
+    LANG-1139: Add replace by regular expression methods in StringUtils
+    This closes #92 from github.
+
+commit: 849578d3a8ef50eea1c5bfcd63f78779d30c1550
+merge: ae86519 5151290
+author: Loic Guibert <lguibert@apache.org>
+date: Fri Oct 23 21:53:32 2015 +0400
+    Merge branch 'fix-LANG-1171'
+    
+    LANG-1171: Add compare methods in StringUtils
+    This closes #110 from github.
+
+commit: 1dbdbfc3fadaee15424671e03bacb0fea134dc7e
+merge: 
+author: Sergio Fernández <wikier@apache.org>
+date: Mon Oct 19 21:38:18 2015 +0200
+    LANG-1175: fixed typo on changes
+
+commit: 6849dfc8a660bf8c95354520a2fa1283c9b3aa43
+merge: 
+author: Sebb <sebb@apache.org>
+date: Mon Aug 10 22:42:21 2015 +0100
+    LANG-1162 StringUtils#equals fails with Index OOBE on non-Strings with
+    identical leading prefix
+
+commit: 4a882e76d9c9940ac561e8f17ede77c85e3dbeda
+merge: 1cf8af4 e8db723
+author: Benedikt Ritter <britter@apache.org>
+date: Fri May 1 23:55:25 2015 +0200
+    Merge branch 'branch-3.4-fix-json-style-rebase'
+    
+    LANG-1128: JsonToStringStyle doesn't handle chars and objects correctly.
+    This also fixes #74 from github. Thanks to github user jacktan1991.
+
+commit: 102b75cd923c30fb81047211ea1eb0b12cfe1a43
+merge: 0799f01 d4359d5
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Apr 28 21:55:53 2015 +0200
+    Merge branch 'fix-LANG-1119' of https://github.com/rikles/commons-lang
+    This closes #71.
+    
+    LANG-1119: Add rotate(string, int) method to StringUtils. Thanks to
+    Loic Guibert.
+
+commit: 0799f01df18c8f2d5695390cfc6db807fe019b18
+merge: 8e7df02 84c5e8c
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Apr 28 21:35:34 2015 +0200
+    Merge branch 'fix-LANG-1118'
+    
+    LANG-1118: StringUtils.repeat('z', -1) throws NegativeArraySizeException.
+    Thanks to Loic Guibert.
+
+commit: 73a8fba6fb23af45ee77f52f33bb8d791a9caa05
+merge: 
+author: Duncan Jones <djones@apache.org>
+date: Wed Apr 15 19:59:50 2015 +0000
+    Updates for LANG-1058: StringUtils.uncapitalize performance improvement. Similar fix also applied to StringUtils.capitalize (as mentioned in issue). Thanks to Leo Wang.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1673944 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 09c42e7d12b2936ac0dc5c67200c28b6412bd395
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 3 12:09:07 2015 +0000
+    LANG-821: Support OS X versions in SystemUtils. This also fixes #59 from github. Thanks to Timo Kockert.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1671043 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 9c7b0fb8e681b901e5fc40c699e4730855f2c14d
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 3 12:01:59 2015 +0000
+    LANG-794: SystemUtils.IS_OS_WINDOWS_2008, VISTA are incorrect. This also fixes #60 from github. Thanks to Timo Kockert.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1671040 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a211ef288c45fdeee5f05fa4708a3d9e23d1cdd4
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Mar 26 10:24:19 2015 +0000
+    Better JavaDoc for LANG-1093: Add ClassUtils.getAbbreviatedName. This fixes #57 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1669311 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: c8e96c0c733ea06ac7481c85f04a8e10ae262ec1
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Mar 26 10:21:24 2015 +0000
+    LANG-1091: Shutdown thread pools in test cases. This fixes #58 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1669310 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bf6ee5c56eb32bb572c240d765d542c048ec9565
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:46:02 2015 +0000
+    LANG-948: Exception while using ExtendedMessageFormat and escaping braces. This fixes #19 from github. Thanks to Andrey Khobnya.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666679 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 3328387a53e6abc26e171b97d8d3dc1c2b5d4971
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:25:06 2015 +0000
+    LANG-990: Avoid String allocation in StrBuilder.append(CharSequence). This fixes #51 from github. Thanks to Mikhail Mazurskiy and Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666669 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: adebbdc750821a377549ff0bb867e09eeedf6172
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:12:47 2015 +0000
+    LANG-1098: Update maven-checkstyle-plugin to 2.14. This fixes #55 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666664 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d6f59c373f91c01d54482bb30a63a8d588b9eaa2
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:07:56 2015 +0000
+    LANG-1097: Update org.easymock:easymock to 3.3.1. This fixes #54 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666662 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 08a854a4f93befababeb479ba2722cd0477a59f8
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 12:02:34 2015 +0000
+    LANG-1096: Update maven-pmd-plugin to 3.4. This fixes #53 from github. Thanks to Michał Kordas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666661 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bf3e77d897fb63d9142d0b3316fc2c6770d64f5b
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sat Mar 14 11:55:43 2015 +0000
+    LANG-1095: Update maven-antrun-plugin to 1.8. This fixes #52 from github. Thanks to Michał Kordas
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666658 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 1f75a8f7cc28fef663eaca75e831c9da11ea2b0e
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Mar 13 18:18:59 2015 +0000
+    LANG-877: Performance improvements for StringEscapeUtils. This fixes #49 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666535 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d38919fcbda835f0ad82d65f25349bd7105b67cc
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Mar 13 07:29:21 2015 +0000
+    LANG-1093: Add ClassUtils.getAbbreviatedName(). This fixes #48 from github. Thanks to Fabian Lange.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1666362 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: bdb5d9723056941a0a29aabc2eaf81b2c96956b5
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Feb 23 20:15:49 2015 +0000
+    LANG-1086: Remove busy wait from AtomicSafeInitializer.get(). This also fixes #46 from github. Thanks to github user artnaseef.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1661762 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: ffc38b1f3b35ddfadb942240b9d2f933ec83d1be
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 08:25:43 2015 +0000
+    LANG-1081: DiffBuilder.append(String, Object left, Object right) does not do a left.equals(right) check. This fixes #41 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654137 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 63f1d6b83bc10a2880f5ec17a172fab284d2eff5
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 08:10:24 2015 +0000
+    LANG-1055: StrSubstitutor.replaceSystemProperties does not work consistently. This fixes #43 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654134 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 38ed1a07259862eceaad05c6581b7f34e85f6be7
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Jan 23 07:56:14 2015 +0000
+    LANG-1082: Add option to disable the objectsTriviallyEqual test in DiffBuilder. This fixes #44 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1654131 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 6eac3468d4569e64f18757225aa8f7fd6f2a5241
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Tue Jan 20 17:30:11 2015 +0000
+    LANG-1083: Add (T) casts to get unit tests to pass in old JDK. This fixes #42 from github. Thanks to Jonathan Baker.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1653307 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: c4ddbe6456c9631c301171098a8ac016eb4e582c
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Jan 1 19:01:41 2015 +0000
+    LANG-1015: Add JsonToStringStyle implementation to ToStringStyle. This fixes #12 and #26 from github. Thanks to Thiago Andrade.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1648919 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 2afdf4d05e38f63b56b0414cf524916681ab58aa
+merge: 
+author: Duncan Jones <djones@apache.org>
+date: Fri Nov 14 12:49:15 2014 +0000
+    Javadoc fix for LANG-1064.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1639624 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 635e41ea181c5fee8860a7044c84ae3557b51189
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sun Nov 9 12:47:12 2014 +0000
+    LANG-1052: Multiline recursive to string style. This fixes #34 from github. Thanks to Jan Matèrne.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1637671 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 4477ae695211449db1df589e9fdc6de84bf4c640
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Thu Oct 2 10:12:12 2014 +0000
+    LANG-1041: Fix MethodUtilsTest so it does not depend on JDK method ordering. This fixes #30 from github. Thanks to Alexandre Bartel.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1628922 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d910918faf359f8144d4195ead470fd0921554dc
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon May 5 17:48:48 2014 +0000
+    LANG-1007: Fixing NumberUtils JAVADoc comments for max methods. This also fixes pull request #22 from github. Thanks to Thiago Andrade.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1592587 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: fbb0f7f88c84001e0a92dae6a71b7e43bda65a56
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Fri Apr 11 13:28:30 2014 +0000
+    LANG-995: Fix bug with stripping spaces on last line in WordUtils.wrap(). This fixes #18 from github. Thanks to Andrey Khobnya
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1586649 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: b5a9cd944c8b6febf55e1191310d02581ac859a8
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Jan 20 17:33:09 2014 +0000
+    LANG-951: Fragments are wrong by 1 day when using fragment YEAR or MONTH - fix test that failed because of wrong assertions
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1559787 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 0942ef04f1fa911d382b79a92dca1dd4b3eb88e6
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Mon Jan 20 17:19:59 2014 +0000
+    LANG-951: Fragments are wrong by 1 day when using fragment YEAR or MONTH - applying patch provided by Sebastian Götz, several tests now fail because of wrong assertions, will fix them in a separate commit
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1559780 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: d971fa4cf7f3c7e7cd4bdbaa3662c1014731d95f
+merge: 
+author: Benedikt Ritter <britter@apache.org>
+date: Sun Jan 5 12:08:29 2014 +0000
+    LANG-942: Test failure in FastDateParserTest and FastDateFormat_ParserTest when building with JDK8. Thanks to Bruno P. Kinoshita and Henri Yandell for their help in fixing this issue.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/lang/trunk@1555485 13f79535-47bb-0310-9956-ffa450edef68
+

@@ -1,0 +1,159 @@
+commons-math
+6167 commits found.
+481 fixed commits found.
+44 newer fixed commits found.
+16 MATHed newer fixed commits found.
+commit: fd37b5dd02bbce93f6f4fceb6bc3e6aa4641c5a7
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Nov 9 15:11:33 2015 -0700
+    Reverted flawed fix for MATH-1246.
+
+commit: a94ff90ab6cd2d92ccb2eb1fd7913b4e5256f02b
+merge: 
+author: Otmar Ertl <otmar.ertl@gmail.com>
+date: Thu Nov 5 20:37:27 2015 +0100
+    MATH-1269: fixed FastMath.exp returning NaN for non-NaN arguments
+
+commit: 09fe956a62e19c160d0093f8fecf254c2bb6f0cb
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Thu Jul 23 20:35:25 2015 -0400
+    Changed data size check to be positive length, not > 1 to fix
+    ResizableDoubleArray constructor failure on input array of
+    length 1.
+    
+    JIRA: MATH-1252
+    Thanks to John Bay
+
+commit: c768ed307d08484cd61ad8ac3faac330d22c8775
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Apr 8 17:36:24 2015 +0200
+    Fixed wrong handling of a corner case.
+    
+    The problem occurs in very difficult to reproduce cases, as it is really
+    a corner case. When the vanishing cut-subhyperplane occurs during a
+    Difference operation, the fixed node still has a null cut-subhyperplane.
+    This was not properply handled.
+    
+    JIRA: MATH-1162
+
+commit: ce2badf02e266a84e2485f1793f13bf722c29306
+merge: 
+author: Phil Steitz <phil.steitz@gmail.com>
+date: Mon Mar 9 12:37:57 2015 -0700
+    Corrected the fix for MATH-1208.
+
+commit: f7e42d2ccf949a5893a439227c8c6bafd2598f26
+merge: 
+author: Sebb <sebb@apache.org>
+date: Sun Jan 25 00:26:21 2015 +0000
+    MATH-1198 Simplify FastMath exp function
+    Hopefully also fix Java 1.5 JIT bug
+
+commit: c93cc818fb56aca198545c63a8015f26472ee0fa
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Thu Jan 8 17:20:25 2015 +0100
+    Announced fix for non-Java1.5 code.
+    
+    JIRA: MATH-1188
+
+commit: 301ad592142079d36f4d33f5309c103c7f4f5dfb
+merge: 
+author: Gilles <erans@apache.org>
+date: Wed Nov 12 12:16:13 2014 +0100
+    MATH-1167
+    
+    Use user-specified threshold to allow detection of singular matrix.
+    [Reported, with fix, by Neil Ireson.]
+
+commit: 4a339cda2c3933a2adcb23ea0ea8470d68d1b010
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Fri Oct 17 10:29:20 2014 +0200
+    Notified fix for bicubic splines.
+    
+    Thanks to Hank Grabowski for the patch.
+    
+    JIRA: MATH-1138
+
+commit: 69273dca6188a3d7d629d0d32dcf9cdb5b6c1036
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Oct 8 14:25:05 2014 +0200
+    fixed too long first step in fixed Runge-Kutta integrators.
+    
+    This change is similar to the one done two years ago for adaptive step sizes integrator.
+    
+    JIRA: MATH-727
+
+commit: fca88f8e3d44d743e82ef2fb3ce880f8b98149a3
+merge: 
+author: Phil Steitz <psteitz@apache.org>
+date: Sat Jun 28 20:08:16 2014 +0000
+    Changed distribution tests to use fixed seed. JIRA: MATH-418.  Thanks to Venkat Murthy.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1606387 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: a197ba858ecf364f9ddf2fe56f3611cf97b4c3b1
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Mon May 19 15:00:03 2014 +0000
+    Fixed NullPointerException in BSPTree.
+    
+    The error occurred when chopping-off a sub-hyperplane
+    that was exactly at a region boundary.
+    
+    Thanks to Aurélien Labrosse for the fix.
+    
+    JIRA: MATH-1123
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1595924 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: cbc32459f8f36e5c57a9db74709e813e5f77bb5e
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Sun Apr 20 14:29:42 2014 +0000
+    Added a fast single-step method for fixed-step Runge-Kutta integrators.
+    
+    JIRA: MATH-1119
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1588769 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 499101c88c8158844e7bbdcba35b8fe91bed8314
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Wed Feb 19 17:19:59 2014 +0000
+    The sparse vector and matrix classes have been un-deprecated.
+    
+    This is a reversal of a former decision, as we now think we should adopt
+    a generally accepted behavior which is ... to ignore the problems of
+    NaNs and infinities in sparse linear algebra entities.
+    
+    JIRA: MATH-870 (which is therefore NOT fixed)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1569825 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: faf997271b36b80d9a342bb1a5a666e8a7a1fb56
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Thu Jan 30 16:31:08 2014 +0000
+    Partly fixed MATH-1096.
+    
+    The 2D cases seem to work now, but there are still problems with the 3D
+    cases.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1562882 13f79535-47bb-0310-9956-ffa450edef68
+
+commit: 7cfbc0da48c8cc8939e97427d8ee5b22c5e55f28
+merge: 
+author: Luc Maisonobe <luc@apache.org>
+date: Fri Jan 24 16:03:44 2014 +0000
+    Fixed error when splitting an arc close to its end.
+    
+    fixes: MATH-1093
+    
+    git-svn-id: https://svn.apache.org/repos/asf/commons/proper/math/trunk@1561047 13f79535-47bb-0310-9956-ffa450edef68
+
